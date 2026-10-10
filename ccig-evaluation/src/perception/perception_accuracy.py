@@ -436,8 +436,8 @@ def run_perception_acc(
     classifiers = _build_property_classifiers(domain_module, domain, attribute_classifier, device)
 
     results: list[PerceptionResult] = []
-    clevr_test_image = '/users/sbsh670/data/clevr/CLEVR_v1.0/image_generative_model_training/images/val'
-    clevr_val_scenes = '/users/sbsh670/data/clevr/CLEVR_v1.0/scenes/CLEVR_val_scenes.json'
+    clevr_test_image = '../image_generative_model_training/images/val'
+    clevr_val_scenes = '../CLEVR_val_scenes.json'
     acc ={'shape':0, 'color':0, 'size': 0, 'material':0, 'region':0}
     acc_scene = 0
     neq = 0

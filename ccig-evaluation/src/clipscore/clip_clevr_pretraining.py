@@ -1,10 +1,3 @@
-'''Command: 
-python clip_clevr_pretraining.py --image_dir /users/sbsh670/data/clevr/CLEVR_v1.0/image_generative_model_training/images/train --clip_train /users/sbsh670/data/ccig_finetune/clip_train_clevr_20k.json --clip_val /users/sbsh670/data/ccig_finetune/clip_val_clevr_20k.json --checkpoint /users/sbsh670/data/ccig-models/clip-clevr
---image_dir : path to folder that has the Clevr train images
---clip_train: path to json file - clip_train_clevr_20k
---clip_val: path to json file - clip_val_clevr_20k
---checkpoint: path to folder where the checkpoint model and procesor saved
-'''  
 import os
 
 # Must be set before any tokenizer runs, and before DataLoader workers fork (now

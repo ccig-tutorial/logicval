@@ -113,13 +113,4 @@ HTTP Basic Auth with that password (any username) -- your browser will prompt
 for it once and remember it for the session. Leaving the variable unset keeps
 the server exactly as before, no prompt, nothing changed.
 
-## Deploying somewhere other than your own machine
 
-See **[README-GCP.md](README-GCP.md)** for deploying this to Google Cloud Run
-(`deploy.sh`, `Dockerfile`) so remote annotators can use it over the internet.
-
-## Not yet implemented
-
-- Batch/aggregate agreement metrics (perception vs. human, judge vs. human,
-  CLIP score vs. human) — this tool only produces the raw annotation files;
-  scoring them is a separate step.

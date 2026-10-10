@@ -1,6 +1,4 @@
 # judge
-Command:
-python -m src.run --images-dir /users/sbsh670/data/ccig-generated-images/gpt-image-2-low/clevr_3_scenes_UNSAT --prompts-file /users/sbsh670/data/ccig_evalData/clevr_3_scenes_UNSAT.jsonl --method vlm-judge --domain clevr --out-dir /users/sbsh670/data/ccig-generated-images/gpt-image-2-low/clevr_3_scenes_UNSAT --judge-backend gpt-4o 
 
 VLM-as-judge: ask a vision-language model to rate prompt-image alignment on a 1-5
 scale (normalized to 0-1 in `JudgeResult.score`), pluggable across backends.
