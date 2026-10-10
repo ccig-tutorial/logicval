@@ -1,0 +1,7 @@
+% C9 Aggregate Comparison: Requires equal cardinality between two independently filtered subsets.
+c9_1prop_left(N, V1') :- N = #count { X : object(X), hasProperty(X, P1', V1') }.
+c9_1prop_right(N, V2') :- N = #count { Y : object(Y), hasProperty(Y, P2', V2') }.
+:- c9_1prop_left(N, V1'), c9_1prop_right(M, V2'), N!= M, V1'!=V2'.
+
+%% The following constraint(s) are added to avoid generating scneces that are only vacuously true!
+:- #count {X : object(X), hasProperty(X, P1', V1')} = 0.

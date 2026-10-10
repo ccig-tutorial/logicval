@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CCIG Human Perception Browser</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/browse.css" />
+</head>
+<body>
+  <header>
+    <h1>Human Perception Browser</h1>
+    <div id="save-indicator" class="save-indicator"></div>
+  </header>
+
+  <section id="picker-panel">
+    <div class="picker-row">
+      <label class="picker-label">Model
+        <select id="model-select"><option value="">-- choose a model --</option></select>
+      </label>
+      <label class="picker-label">Dataset
+        <select id="file-select" disabled><option value="">-- choose a model first --</option></select>
+      </label>
+      <label class="picker-label">Image
+        <select id="image-select" disabled><option value="">-- choose a dataset first --</option></select>
+      </label>
+    </div>
+    <div id="picker-error" class="error"></div>
+  </section>
+
+  <section id="workspace-panel" class="hidden">
+    <div class="workspace">
+      <div class="canvas-pane">
+        <canvas id="canvas"></canvas>
+        <p id="canvas-hint" class="hint">Drag on empty space to add an object box. Click a box to select it; drag its corners to resize, drag its body to move. Delete/Backspace removes the selected box.</p>
+      </div>
+      <div class="side-pane">
+        <div class="side-col object-list-col">
+          <h3>Objects</h3>
+          <div id="object-list" class="object-list"></div>
+          <button type="button" id="mark-empty" class="mark-empty-btn">Mark scene as empty (0 objects)</button>
+          <div class="reasonable-row">
+            <span class="hint-inline">Reasonable scene:</span>
+            <div class="view-toggle">
+              <button type="button" id="reasonable-yes" class="toggle-btn" data-value="true">Yes</button>
+              <button type="button" id="reasonable-no" class="toggle-btn" data-value="false">No</button>
+            </div>
+          </div>
+        </div>
+        <div class="side-col object-editor-col">
+          <h3>Selected object</h3>
+          <div id="object-editor" class="object-editor hidden">
+            <div id="property-fields"></div>
+            <button id="delete-object">Delete object</button>
+          </div>
+          <p id="no-selection-hint" class="hint">Click an object (on the canvas or in the list) to edit its properties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/browse.js"></script>
+</body>
+</html>

@@ -1,0 +1,656 @@
+{
+  "method": "perception",
+  "domain": "clevr",
+  "detector": "owlv2",
+  "attribute_classifier": "clip-zero-shot",
+  "results": [
+    {
+      "id": "33",
+      "prompt_field": "short",
+      "image_path": "/home/marjan.alirezaie/myworks/code/miscellaneous/ccig/CCIG_Eval/data/generated_images/gpt-image-2-low/clevr_1_scenes_SAT/33-short.png",
+      "instantiated_rule": ":- #count {X: object(X), not hasProperty(X, material, rubber), not hasProperty(X, region, r0)} = 0.",
+      "dataset_status": "SAT",
+      "predicted_status": "UNSAT",
+      "agrees_with_dataset": false,
+      "scene_graph": {
+        "objects": {
+          "0": {
+            "shape": "cylinder",
+            "color": "blue",
+            "material": "rubber",
+            "size": "large",
+            "region": "r1",
+            "bbox": [
+              600.9899291992188,
+              154.2466583251953,
+              743.3911743164062,
+              366.17047119140625
+            ],
+            "det_score": 0.36432233452796936
+          },
+          "1": {
+            "shape": "sphere",
+            "color": "green",
+            "material": "rubber",
+            "size": "large",
+            "region": "r0",
+            "bbox": [
+              267.32037353515625,
+              221.58294677734375,
+              399.25567626953125,
+              356.505615234375
+            ],
+            "det_score": 0.44775551557540894
+          },
+          "2": {
+            "shape": "cylinder",
+            "color": "blue",
+            "material": "rubber",
+            "size": "small",
+            "region": "r1",
+            "bbox": [
+              584.6741943359375,
+              152.3600311279297,
+              890.82275390625,
+              372.12890625
+            ],
+            "det_score": 0.1021670401096344
+          },
+          "3": {
+            "shape": "cube",
+            "color": "red",
+            "material": "rubber",
+            "size": "small",
+            "region": "r0",
+            "bbox": [
+              108.21511840820312,
+              260.0846862792969,
+              202.88607788085938,
+              364.0362854003906
+            ],
+            "det_score": 0.5162116289138794
+          },
+          "4": {
+            "shape": "sphere",
+            "color": "brown",
+            "material": "rubber",
+            "size": "large",
+            "region": "r1",
+            "bbox": [
+              811.1507568359375,
+              269.3893127441406,
+              893.7784423828125,
+              355.7975769042969
+            ],
+            "det_score": 0.43178293108940125
+          },
+          "5": {
+            "shape": "cube",
+            "color": "green",
+            "material": "rubber",
+            "size": "small",
+            "region": "r0",
+            "bbox": [
+              -2.342376708984375,
+              -1.96923828125,
+              493.7558898925781,
+              504.2259826660156
+            ],
+            "det_score": 0.17689760029315948
+          },
+          "6": {
+            "shape": "cube",
+            "color": "gray",
+            "material": "rubber",
+            "size": "large",
+            "region": "r3",
+            "bbox": [
+              777.9501953125,
+              688.577392578125,
+              927.6417236328125,
+              880.19140625
+            ],
+            "det_score": 0.23742328584194183
+          },
+          "7": {
+            "shape": "cube",
+            "color": "yellow",
+            "material": "rubber",
+            "size": "small",
+            "region": "r2",
+            "bbox": [
+              247.11123657226562,
+              689.2608032226562,
+              434.3598937988281,
+              898.0967407226562
+            ],
+            "det_score": 0.5558278560638428
+          },
+          "8": {
+            "shape": "sphere",
+            "color": "cyan",
+            "material": "rubber",
+            "size": "large",
+            "region": "r3",
+            "bbox": [
+              618.4127197265625,
+              770.5287475585938,
+              699.1085205078125,
+              856.6320190429688
+            ],
+            "det_score": 0.4215232729911804
+          },
+          "9": {
+            "shape": "cube",
+            "color": "purple",
+            "material": "rubber",
+            "size": "small",
+            "region": "r2",
+            "bbox": [
+              99.90768432617188,
+              761.9490966796875,
+              177.41619873046875,
+              864.7139892578125
+            ],
+            "det_score": 0.32667121291160583
+          }
+        },
+        "relations": [
+          {
+            "from": 6,
+            "to": 0,
+            "direction": "front"
+          },
+          {
+            "from": 0,
+            "to": 6,
+            "direction": "behind"
+          },
+          {
+            "from": 7,
+            "to": 0,
+            "direction": "front"
+          },
+          {
+            "from": 0,
+            "to": 7,
+            "direction": "behind"
+          },
+          {
+            "from": 8,
+            "to": 0,
+            "direction": "front"
+          },
+          {
+            "from": 0,
+            "to": 8,
+            "direction": "behind"
+          },
+          {
+            "from": 9,
+            "to": 0,
+            "direction": "front"
+          },
+          {
+            "from": 0,
+            "to": 9,
+            "direction": "behind"
+          },
+          {
+            "from": 0,
+            "to": 1,
+            "direction": "right"
+          },
+          {
+            "from": 1,
+            "to": 0,
+            "direction": "left"
+          },
+          {
+            "from": 2,
+            "to": 1,
+            "direction": "right"
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "direction": "left"
+          },
+          {
+            "from": 4,
+            "to": 1,
+            "direction": "right"
+          },
+          {
+            "from": 1,
+            "to": 4,
+            "direction": "left"
+          },
+          {
+            "from": 6,
+            "to": 1,
+            "direction": "right"
+          },
+          {
+            "from": 1,
+            "to": 6,
+            "direction": "left"
+          },
+          {
+            "from": 6,
+            "to": 1,
+            "direction": "front"
+          },
+          {
+            "from": 1,
+            "to": 6,
+            "direction": "behind"
+          },
+          {
+            "from": 7,
+            "to": 1,
+            "direction": "front"
+          },
+          {
+            "from": 1,
+            "to": 7,
+            "direction": "behind"
+          },
+          {
+            "from": 8,
+            "to": 1,
+            "direction": "right"
+          },
+          {
+            "from": 1,
+            "to": 8,
+            "direction": "left"
+          },
+          {
+            "from": 8,
+            "to": 1,
+            "direction": "front"
+          },
+          {
+            "from": 1,
+            "to": 8,
+            "direction": "behind"
+          },
+          {
+            "from": 9,
+            "to": 1,
+            "direction": "front"
+          },
+          {
+            "from": 1,
+            "to": 9,
+            "direction": "behind"
+          },
+          {
+            "from": 6,
+            "to": 2,
+            "direction": "front"
+          },
+          {
+            "from": 2,
+            "to": 6,
+            "direction": "behind"
+          },
+          {
+            "from": 7,
+            "to": 2,
+            "direction": "front"
+          },
+          {
+            "from": 2,
+            "to": 7,
+            "direction": "behind"
+          },
+          {
+            "from": 8,
+            "to": 2,
+            "direction": "front"
+          },
+          {
+            "from": 2,
+            "to": 8,
+            "direction": "behind"
+          },
+          {
+            "from": 9,
+            "to": 2,
+            "direction": "front"
+          },
+          {
+            "from": 2,
+            "to": 9,
+            "direction": "behind"
+          },
+          {
+            "from": 0,
+            "to": 3,
+            "direction": "right"
+          },
+          {
+            "from": 3,
+            "to": 0,
+            "direction": "left"
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "direction": "right"
+          },
+          {
+            "from": 3,
+            "to": 2,
+            "direction": "left"
+          },
+          {
+            "from": 4,
+            "to": 3,
+            "direction": "right"
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "direction": "left"
+          },
+          {
+            "from": 6,
+            "to": 3,
+            "direction": "right"
+          },
+          {
+            "from": 3,
+            "to": 6,
+            "direction": "left"
+          },
+          {
+            "from": 6,
+            "to": 3,
+            "direction": "front"
+          },
+          {
+            "from": 3,
+            "to": 6,
+            "direction": "behind"
+          },
+          {
+            "from": 7,
+            "to": 3,
+            "direction": "front"
+          },
+          {
+            "from": 3,
+            "to": 7,
+            "direction": "behind"
+          },
+          {
+            "from": 8,
+            "to": 3,
+            "direction": "right"
+          },
+          {
+            "from": 3,
+            "to": 8,
+            "direction": "left"
+          },
+          {
+            "from": 8,
+            "to": 3,
+            "direction": "front"
+          },
+          {
+            "from": 3,
+            "to": 8,
+            "direction": "behind"
+          },
+          {
+            "from": 9,
+            "to": 3,
+            "direction": "front"
+          },
+          {
+            "from": 3,
+            "to": 9,
+            "direction": "behind"
+          },
+          {
+            "from": 6,
+            "to": 4,
+            "direction": "front"
+          },
+          {
+            "from": 4,
+            "to": 6,
+            "direction": "behind"
+          },
+          {
+            "from": 7,
+            "to": 4,
+            "direction": "front"
+          },
+          {
+            "from": 4,
+            "to": 7,
+            "direction": "behind"
+          },
+          {
+            "from": 8,
+            "to": 4,
+            "direction": "front"
+          },
+          {
+            "from": 4,
+            "to": 8,
+            "direction": "behind"
+          },
+          {
+            "from": 9,
+            "to": 4,
+            "direction": "front"
+          },
+          {
+            "from": 4,
+            "to": 9,
+            "direction": "behind"
+          },
+          {
+            "from": 0,
+            "to": 5,
+            "direction": "right"
+          },
+          {
+            "from": 5,
+            "to": 0,
+            "direction": "left"
+          },
+          {
+            "from": 2,
+            "to": 5,
+            "direction": "right"
+          },
+          {
+            "from": 5,
+            "to": 2,
+            "direction": "left"
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "direction": "right"
+          },
+          {
+            "from": 5,
+            "to": 4,
+            "direction": "left"
+          },
+          {
+            "from": 6,
+            "to": 5,
+            "direction": "right"
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "direction": "left"
+          },
+          {
+            "from": 6,
+            "to": 5,
+            "direction": "front"
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "direction": "behind"
+          },
+          {
+            "from": 7,
+            "to": 5,
+            "direction": "front"
+          },
+          {
+            "from": 5,
+            "to": 7,
+            "direction": "behind"
+          },
+          {
+            "from": 8,
+            "to": 5,
+            "direction": "right"
+          },
+          {
+            "from": 5,
+            "to": 8,
+            "direction": "left"
+          },
+          {
+            "from": 8,
+            "to": 5,
+            "direction": "front"
+          },
+          {
+            "from": 5,
+            "to": 8,
+            "direction": "behind"
+          },
+          {
+            "from": 9,
+            "to": 5,
+            "direction": "front"
+          },
+          {
+            "from": 5,
+            "to": 9,
+            "direction": "behind"
+          },
+          {
+            "from": 0,
+            "to": 7,
+            "direction": "right"
+          },
+          {
+            "from": 7,
+            "to": 0,
+            "direction": "left"
+          },
+          {
+            "from": 2,
+            "to": 7,
+            "direction": "right"
+          },
+          {
+            "from": 7,
+            "to": 2,
+            "direction": "left"
+          },
+          {
+            "from": 4,
+            "to": 7,
+            "direction": "right"
+          },
+          {
+            "from": 7,
+            "to": 4,
+            "direction": "left"
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "direction": "right"
+          },
+          {
+            "from": 7,
+            "to": 6,
+            "direction": "left"
+          },
+          {
+            "from": 8,
+            "to": 7,
+            "direction": "right"
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "direction": "left"
+          },
+          {
+            "from": 0,
+            "to": 9,
+            "direction": "right"
+          },
+          {
+            "from": 9,
+            "to": 0,
+            "direction": "left"
+          },
+          {
+            "from": 2,
+            "to": 9,
+            "direction": "right"
+          },
+          {
+            "from": 9,
+            "to": 2,
+            "direction": "left"
+          },
+          {
+            "from": 4,
+            "to": 9,
+            "direction": "right"
+          },
+          {
+            "from": 9,
+            "to": 4,
+            "direction": "left"
+          },
+          {
+            "from": 6,
+            "to": 9,
+            "direction": "right"
+          },
+          {
+            "from": 9,
+            "to": 6,
+            "direction": "left"
+          },
+          {
+            "from": 8,
+            "to": 9,
+            "direction": "right"
+          },
+          {
+            "from": 9,
+            "to": 8,
+            "direction": "left"
+          }
+        ]
+      },
+      "clingo_program": "object(0).\nobject(1).\nobject(2).\nobject(3).\nobject(4).\nobject(5).\nobject(6).\nobject(7).\nobject(8).\nobject(9).\nhasProperty(0,shape,cylinder).\nhasProperty(0,color,blue).\nhasProperty(0,material,rubber).\nhasProperty(0,size,large).\nhasProperty(0,region,r1).\nhasProperty(1,shape,sphere).\nhasProperty(1,color,green).\nhasProperty(1,material,rubber).\nhasProperty(1,size,large).\nhasProperty(1,region,r0).\nhasProperty(2,shape,cylinder).\nhasProperty(2,color,blue).\nhasProperty(2,material,rubber).\nhasProperty(2,size,small).\nhasProperty(2,region,r1).\nhasProperty(3,shape,cube).\nhasProperty(3,color,red).\nhasProperty(3,material,rubber).\nhasProperty(3,size,small).\nhasProperty(3,region,r0).\nhasProperty(4,shape,sphere).\nhasProperty(4,color,brown).\nhasProperty(4,material,rubber).\nhasProperty(4,size,large).\nhasProperty(4,region,r1).\nhasProperty(5,shape,cube).\nhasProperty(5,color,green).\nhasProperty(5,material,rubber).\nhasProperty(5,size,small).\nhasProperty(5,region,r0).\nhasProperty(6,shape,cube).\nhasProperty(6,color,gray).\nhasProperty(6,material,rubber).\nhasProperty(6,size,large).\nhasProperty(6,region,r3).\nhasProperty(7,shape,cube).\nhasProperty(7,color,yellow).\nhasProperty(7,material,rubber).\nhasProperty(7,size,small).\nhasProperty(7,region,r2).\nhasProperty(8,shape,sphere).\nhasProperty(8,color,cyan).\nhasProperty(8,material,rubber).\nhasProperty(8,size,large).\nhasProperty(8,region,r3).\nhasProperty(9,shape,cube).\nhasProperty(9,color,purple).\nhasProperty(9,material,rubber).\nhasProperty(9,size,small).\nhasProperty(9,region,r2).\nhasRelationship(6,0,front).\nhasRelationship(0,6,behind).\nhasRelationship(7,0,front).\nhasRelationship(0,7,behind).\nhasRelationship(8,0,front).\nhasRelationship(0,8,behind).\nhasRelationship(9,0,front).\nhasRelationship(0,9,behind).\nhasRelationship(0,1,right).\nhasRelationship(1,0,left).\nhasRelationship(2,1,right).\nhasRelationship(1,2,left).\nhasRelationship(4,1,right).\nhasRelationship(1,4,left).\nhasRelationship(6,1,right).\nhasRelationship(1,6,left).\nhasRelationship(6,1,front).\nhasRelationship(1,6,behind).\nhasRelationship(7,1,front).\nhasRelationship(1,7,behind).\nhasRelationship(8,1,right).\nhasRelationship(1,8,left).\nhasRelationship(8,1,front).\nhasRelationship(1,8,behind).\nhasRelationship(9,1,front).\nhasRelationship(1,9,behind).\nhasRelationship(6,2,front).\nhasRelationship(2,6,behind).\nhasRelationship(7,2,front).\nhasRelationship(2,7,behind).\nhasRelationship(8,2,front).\nhasRelationship(2,8,behind).\nhasRelationship(9,2,front).\nhasRelationship(2,9,behind).\nhasRelationship(0,3,right).\nhasRelationship(3,0,left).\nhasRelationship(2,3,right).\nhasRelationship(3,2,left).\nhasRelationship(4,3,right).\nhasRelationship(3,4,left).\nhasRelationship(6,3,right).\nhasRelationship(3,6,left).\nhasRelationship(6,3,front).\nhasRelationship(3,6,behind).\nhasRelationship(7,3,front).\nhasRelationship(3,7,behind).\nhasRelationship(8,3,right).\nhasRelationship(3,8,left).\nhasRelationship(8,3,front).\nhasRelationship(3,8,behind).\nhasRelationship(9,3,front).\nhasRelationship(3,9,behind).\nhasRelationship(6,4,front).\nhasRelationship(4,6,behind).\nhasRelationship(7,4,front).\nhasRelationship(4,7,behind).\nhasRelationship(8,4,front).\nhasRelationship(4,8,behind).\nhasRelationship(9,4,front).\nhasRelationship(4,9,behind).\nhasRelationship(0,5,right).\nhasRelationship(5,0,left).\nhasRelationship(2,5,right).\nhasRelationship(5,2,left).\nhasRelationship(4,5,right).\nhasRelationship(5,4,left).\nhasRelationship(6,5,right).\nhasRelationship(5,6,left).\nhasRelationship(6,5,front).\nhasRelationship(5,6,behind).\nhasRelationship(7,5,front).\nhasRelationship(5,7,behind).\nhasRelationship(8,5,right).\nhasRelationship(5,8,left).\nhasRelationship(8,5,front).\nhasRelationship(5,8,behind).\nhasRelationship(9,5,front).\nhasRelationship(5,9,behind).\nhasRelationship(0,7,right).\nhasRelationship(7,0,left).\nhasRelationship(2,7,right).\nhasRelationship(7,2,left).\nhasRelationship(4,7,right).\nhasRelationship(7,4,left).\nhasRelationship(6,7,right).\nhasRelationship(7,6,left).\nhasRelationship(8,7,right).\nhasRelationship(7,8,left).\nhasRelationship(0,9,right).\nhasRelationship(9,0,left).\nhasRelationship(2,9,right).\nhasRelationship(9,2,left).\nhasRelationship(4,9,right).\nhasRelationship(9,4,left).\nhasRelationship(6,9,right).\nhasRelationship(9,6,left).\nhasRelationship(8,9,right).\nhasRelationship(9,8,left).\n:- #count {X: object(X), not hasProperty(X, material, rubber), not hasProperty(X, region, r0)} = 0.",
+      "success": true,
+      "error": null
+    }
+  ]
+}

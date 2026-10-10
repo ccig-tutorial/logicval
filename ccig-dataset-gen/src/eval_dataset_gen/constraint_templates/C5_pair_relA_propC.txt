@@ -1,0 +1,6 @@
+% C5 Conditional (Subgraph): Every pair (X1,X2) such that D1'(X1, X2), must have (P1'=V1') for X1 .
+:- object(X1), object(X2), X1 != X2, hasRelationship(X1, X2, D1'), not hasProperty(X1, P1', V1').
+
+
+%% The following constraint(s) are added to avoid generating scneces that are only vacuously true!
+:- #count {X1, X2: object(X1), object(X2), X1 != X2, hasRelationship(X1, X2, D1')} = 0.

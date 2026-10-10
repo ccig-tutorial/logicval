@@ -1,0 +1,2 @@
+% C8 Cardinality: At least N' object may have property P1'!=V1'.
+:- #count{X: object(X), not hasProperty(X, P1', V1')} < N'.

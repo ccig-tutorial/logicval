@@ -1,0 +1,2 @@
+% C2 Universal Object: Every object must have property P1'=V1' and P2'=V2' and P3'=V3'.
+:- object(X), P1'!=P2', P2'!=P3', P1'!=P3', #count{1 : hasProperty(X, P1', V1'); 2 : hasProperty(X, P2', V2'); 3 : hasProperty(X, P3', V3')} != 3.

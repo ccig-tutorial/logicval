@@ -1,0 +1,2 @@
+% C1 Existential Object, with a negated literal: there exist at least one object with property P1'!=V1'.
+:- #count {X: object(X), not hasProperty(X, P1', V1')} = 0.

@@ -1,0 +1,12 @@
+# Core web app -- enough to annotate by hand (no "Run perception" button use).
+flask
+pillow
+numpy
+
+# Only needed if you click "Run perception on all images" in the UI, which
+# actually runs the detector + attribute classifiers (see requirements-open.txt
+# in ccig-evaluation/, which this mirrors):
+# torch
+# transformers>=4.46
+# accelerate
+# scipy

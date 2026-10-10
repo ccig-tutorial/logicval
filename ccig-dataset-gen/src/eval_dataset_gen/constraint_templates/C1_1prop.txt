@@ -1,0 +1,3 @@
+% C1 Existential Object: At least one object with property P1'=V1'.
+:- #count { X : object(X), hasProperty(X, P1', V1')} = 0.
+ 

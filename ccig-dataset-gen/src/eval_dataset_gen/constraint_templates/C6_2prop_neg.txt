@@ -1,0 +1,9 @@
+% C6 Existential-Universal: At least one candidate object (P1'=V1', P2'=V2') must relate by D1' to every target object (P3'=V3', P4'!=V4').
+c6_forbid_2_prop_counterexample(X) :- object(X), object(Y), X!=Y, hasProperty(X, P1', V1'), hasProperty(X, P2', V2'), hasProperty(Y, P3', V3'), not hasProperty(Y, P4', V4'), not hasRelationship(X, Y, D1'),  P1'!=P2', P3'!=P4', V1'!=V3', V2'!=V3'.
+c6_forbid_2_prop_satisfied :- object(X), hasProperty(X, P1', V1'), hasProperty(X, P2', V2'), P1'!=P2', not c6_forbid_2_prop_counterexample(X).
+:- not c6_forbid_2_prop_satisfied.
+
+%% The following constraint(s) are added to avoid generating scneces that are only vacuously true!
+:- #count{Y: object(Y), hasProperty(Y, P3', V3'), not hasProperty(Y, P4', V4'), P3'!=P4'}=0.
+
+%% shouldn't we add P3!=P4

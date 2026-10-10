@@ -1,0 +1,2 @@
+% C2 Universal Object: No object must have property P1'=V1' and property P1'=V2'.
+:- object(X), V1'!=V2', 1 {hasProperty(X, P1', V1'); hasProperty(X, P1', V2')}.

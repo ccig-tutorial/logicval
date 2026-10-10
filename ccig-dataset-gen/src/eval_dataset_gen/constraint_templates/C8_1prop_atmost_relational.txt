@@ -1,0 +1,2 @@
+% C8 Cardinality: At most N' objects with P1'=V1' stand in relation D1' to some object Y with P2'=V2'.'
+:- #count{X: object(X), hasProperty(X, P1', V1'), object(Y), X != Y, hasProperty(Y, P2', V2'), hasRelationship(X, Y, D1'), V1'!=V2'} > N'.

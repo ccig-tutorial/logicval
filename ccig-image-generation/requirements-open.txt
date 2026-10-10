@@ -1,0 +1,9 @@
+-r requirements.txt
+torch
+diffusers
+transformers
+accelerate
+peft
+sentencepiece
+protobuf
+safetensors

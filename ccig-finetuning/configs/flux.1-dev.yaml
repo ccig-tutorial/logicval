@@ -1,0 +1,12 @@
+dataset_path: ../data/clevr-dataset/finetune-dataset-one-per-image.json
+images_dir: ../data/clevr-dataset/images
+output_dir: ../outputs/checkpoints-finetuning/flux.1-dev
+run_name: run1
+resolution_width: 1024
+resolution_height: 688
+learning_rate: 1.0e-4
+lora_rank: 16
+lora_alpha: 16
+batch_size: 1
+seed: 42
+eval_dataset_path: ../data/clevr-dataset/finetuning-data/eval_holdout.json

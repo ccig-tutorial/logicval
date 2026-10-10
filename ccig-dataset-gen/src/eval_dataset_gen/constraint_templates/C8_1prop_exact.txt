@@ -1,0 +1,2 @@
+% C8 Cardinality: exactly N' object may have property P1'=V1' (no two distinct objects share value V1').
+:- #count{X: object(X), hasProperty(X, P1', V1')} != N'.

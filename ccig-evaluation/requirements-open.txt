@@ -1,0 +1,6 @@
+-r requirements.txt
+torch
+transformers>=4.46
+accelerate
+qwen-vl-utils
+scipy  # required by Owlv2ImageProcessor's resize()

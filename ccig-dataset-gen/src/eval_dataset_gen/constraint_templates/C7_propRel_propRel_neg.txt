@@ -1,0 +1,5 @@
+% C7 Universal-Existential: forall x.z Phi(x), Phi(z), Rel(x,z)  -> exists y. (Psi(y) and Rel(y,x)) (with negation)
+:- object(X), object(Z), hasProperty(X, P1', V1'), hasProperty(Z, P2', V2'), V1'!=V2', hasRelationship(X, Z, D1'), X!=Z, #count { Y : object(Y), X != Y, Y!=Z, not hasProperty(Y, P3', V3'), hasRelationship(Y, X, D2') } = 0.
+
+%% The following constraint(s) are added to avoid generating scneces that are only vacuously true!
+:- #count {X, Z: object(X), object(Z), hasProperty(X, P1', V1'), hasProperty(Z, P2', V2'), V1'!=V2', hasRelationship(X, Z, D1'), X!=Z} = 0.

@@ -1,0 +1,2 @@
+% C1 Existential Object, with a negated literal: there exist at least an object with property P1'=V1' and property P2'=V2' and property P3'!=V3' and property P4'!=V4'.
+:- #count {X: object(X), hasProperty(X, P1', V1'), hasProperty(X, P2', V2'), not hasProperty(X, P3', V3'), not hasProperty(X, P4', V4'), P1'!=P2', P1'!=P3', P1'!=P4', P2'!=P3', P2'!=P4', P3'!=P4'} = 0.

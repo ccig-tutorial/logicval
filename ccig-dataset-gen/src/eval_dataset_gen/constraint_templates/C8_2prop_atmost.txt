@@ -1,0 +1,2 @@
+% C8 Cardinality: at most N object may have property P1'=V1' and P2'=V2' 
+:- #count{X: object(X), hasProperty(X, P1', V1'), hasProperty(X, P2', V2'), P1'!=P2'} > N'.

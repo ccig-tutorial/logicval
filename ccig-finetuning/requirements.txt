@@ -1,0 +1,11 @@
+torch
+diffusers
+transformers
+accelerate
+peft
+sentencepiece
+protobuf
+safetensors
+pillow
+numpy
+pyyaml

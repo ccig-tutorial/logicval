@@ -1,0 +1,5 @@
+% C5 Conditional (Subgraph): Every pair (X1,X2) with X1 having (P1'=V1'), X2 having (P2'=V2'), related by D1', must have P3'=V3' for X2.
+:- object(X1), object(X2), X1 != X2, hasProperty(X1, P1', V1'), hasProperty(X2, P2', V2'), hasRelationship(X1, X2, D1'), not hasProperty(X2, P3', V3'), V1'!=V2', P3'!=P2'.
+
+%% The following constraint(s) are added to avoid generating scneces that are only vacuously true!
+:- #count {X1, X2: object(X1), object(X2), X1 != X2, hasProperty(X1, P1', V1'), hasProperty(X2, P2', V2'), hasRelationship(X1, X2, D1'), V1'!=V2'} = 0.

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CCIG Human Scene-Graph Annotation</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>CCIG Human Scene-Graph Annotation</h1>
+    <div id="save-indicator" class="save-indicator"></div>
+  </header>
+
+  <section id="setup-panel">
+    <h2>Setup</h2>
+    <p class="hint">Point this at one generated-images batch and the prompts file it was generated from.</p>
+    <form id="setup-form">
+      <label>Images dir
+        <input name="images_dir" placeholder="/path/to/data/generated_images/&lt;batch&gt;" required />
+      </label>
+      <label>Prompts file
+        <input name="prompts_file" placeholder="/path/to/data/ccig_eval_dataset/clevr_1_scenes_SAT.json" required />
+      </label>
+      <p class="hint">Output goes to a fixed location derived from these two paths:
+        <code>data/evaluation/perception/&lt;model&gt;/&lt;dataset&gt;_{auto,human}-perception.json</code>
+        -- model = the folder right after <code>generated_images</code>, dataset = prompts file's name.</p>
+      <div class="row">
+        <label>Domain
+          <select name="domain"><option value="clevr">clevr</option><option value="coco">coco</option></select>
+        </label>
+        <label>Detector
+          <select name="detector"><option value="owlv2">owlv2</option><option value="grounding-dino">grounding-dino</option></select>
+        </label>
+        <label>Device
+          <select name="device"><option value="">auto</option><option value="cpu">cpu</option><option value="cuda">cuda</option></select>
+        </label>
+      </div>
+      <label>Default "reasonable scene" value
+        <select name="default_reasonable_scene"><option value="true" selected>Yes</option><option value="false">No</option></select>
+      </label>
+      <p class="hint">Starting value for each image's "reasonable scene" flag (human-perception
+        only) until you save that image yourself -- change it per image in the annotation view.</p>
+      <button type="submit">Load batch</button>
+    </form>
+    <div id="setup-error" class="error"></div>
+  </section>
+
+  <section id="main-panel" class="hidden">
+    <div class="toolbar">
+      <button id="change-setup">&larr; change batch</button>
+      <button id="run-perception">Run perception on all images</button>
+      <span id="perception-status" class="hint-inline"></span>
+      <label class="image-picker">Image
+        <select id="image-select"></select>
+      </label>
+    </div>
+
+    <div class="context-panel">
+      <div><strong>Model:</strong> <span id="ctx-model"></span>
+        &nbsp;&middot;&nbsp;<strong>Dataset:</strong> <span id="ctx-dataset"></span></div>
+      <div><strong>Prompt:</strong> <span id="ctx-prompt"></span></div>
+      <div><strong>Constraint:</strong> <code id="ctx-rule"></code></div>
+    </div>
+
+    <div class="perception-info-panel">
+      <div class="perception-info-main">
+        <div class="perception-info-row">
+          <strong>Automated perception</strong>
+          <span id="ctx-automated-count" class="count-badge">0 objects</span>
+          <code id="ctx-automated-path" class="path-empty"></code>
+        </div>
+        <div class="perception-info-row">
+          <strong>Human perception</strong>
+          <span id="ctx-human-count" class="count-badge">0 objects</span>
+          <code id="ctx-human-path" class="path-empty"></code>
+        </div>
+      </div>
+
+      <div class="view-toolbar">
+        <span class="hint-inline">Show:</span>
+        <div class="view-toggle">
+          <button type="button" id="view-human" class="toggle-btn" data-pref="human">Human</button>
+          <button type="button" id="view-automated" class="toggle-btn" data-pref="automated">Automated</button>
+        </div>
+        <span id="match-flag" class="match-flag hidden"></span>
+        <span id="view-warning" class="warning hidden">Editing now will overwrite your saved human annotation with this automated version.</span>
+      </div>
+    </div>
+
+    <div class="workspace">
+      <div class="canvas-pane">
+        <canvas id="canvas"></canvas>
+        <p id="canvas-hint" class="hint">Drag on empty space to add an object box. Click a box to select it; drag its corners to resize, drag its body to move. Delete/Backspace removes the selected box.</p>
+      </div>
+      <div class="side-pane">
+        <div class="side-col object-list-col">
+          <h3>Objects</h3>
+          <div id="object-list" class="object-list"></div>
+          <button type="button" id="mark-empty" class="mark-empty-btn">Mark scene as empty (0 objects)</button>
+          <div class="reasonable-row">
+            <span class="hint-inline">Reasonable scene:</span>
+            <div class="view-toggle">
+              <button type="button" id="reasonable-yes" class="toggle-btn" data-value="true">Yes</button>
+              <button type="button" id="reasonable-no" class="toggle-btn" data-value="false">No</button>
+            </div>
+          </div>
+        </div>
+        <div class="side-col object-editor-col">
+          <h3>Selected object</h3>
+          <div id="object-editor" class="object-editor hidden">
+            <div id="property-fields"></div>
+            <button id="delete-object">Delete object</button>
+          </div>
+          <p id="no-selection-hint" class="hint">Click an object (on the canvas or in the list) to edit its properties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/app.js"></script>
+</body>
+</html>

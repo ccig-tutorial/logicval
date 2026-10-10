@@ -1,0 +1,2 @@
+% C2 Universal Object: No object must have property P1'=V1' and property P2'!=V2'.
+:- #count{X: object(X), hasProperty(X, P1', V1'), not hasProperty(X, P2', V2'), P1'!=P2'}>0.

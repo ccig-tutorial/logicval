@@ -1,0 +1,5 @@
+% C7 Universal-Existential: Each trigger object (P1'=V1') needs a witness  with P2'=V2' related by D1'.
+:- object(X), hasProperty(X, P1', V1'), #count { Y : object(Y), X != Y, hasProperty(Y, P2', V2'), V2'!=V1', hasRelationship(Y, X, D1') } = 0.
+
+%% The following constraint(s) are added to avoid generating scneces that are only vacuously true!
+:- #count {X: object(X), hasProperty(X, P1', V1')} = 0.

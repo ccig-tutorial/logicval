@@ -1,0 +1,2 @@
+% C2 Universal Object: No object must have property P1'=V1'.
+:- object(X), hasProperty(X, P1', V1').

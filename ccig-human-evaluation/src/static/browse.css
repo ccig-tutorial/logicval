@@ -1,0 +1,48 @@
+/* Only what's specific to this page's layout -- every other class (.workspace,
+   .side-pane, .object-list, .toggle-btn, .hint, #canvas, ...) comes from style.css
+   unmodified, so the two pages share one visual language without style.css itself
+   ever being touched. */
+
+#picker-panel {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  background: var(--bg-panel);
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.picker-row {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.picker-label {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.picker-label select {
+  display: block;
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: inherit;
+}
+.picker-label select:disabled { opacity: 0.5; cursor: not-allowed; }
+
+#picker-error:not(:empty) { margin-top: 0.75rem; }
+
+#workspace-panel {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  background: var(--bg-panel);
+  padding: 1.25rem 1.4rem;
+}

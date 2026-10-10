@@ -1,0 +1,5 @@
+% C5 Conditional (Subgraph): Every triple (X1,X2, X3) with X1 having (P1'=V1'), X2 having (P2'=V2'), X3 having (P3', V3') and D1' (X1, X2), must be related by D2'(X2, X3).
+:- object(X1), object(X2), object(X3), X1!= X2, X2!= X3, X1!= X3, hasProperty(X1, P1', V1'), hasProperty(X2, P2', V2'), hasProperty(X3, P3', V3'), hasRelationship(X1, X2, D1'), not hasRelationship(X2, X3, D2'), V1' != V2', V2' != V3', V1' != V3'.
+
+%% The following constraint(s) are added to avoid generating scneces that are only vacuously true!
+:- #count {X1, X2, X3: object(X1), object(X2), object(X3), X1!=X2, X1!=X3, X2!=X3, hasProperty(X1, P1', V1'), hasProperty(X2, P2', V2'), hasProperty(X3, P3', V3'), hasRelationship(X1, X2, D1'), V1'!=V2', V2'!=V3', V1'!=V3'} = 0.
