@@ -62,3 +62,9 @@ repository and will be released with the camera-ready version. CLEVR is availabl
   note   = {Under review}
 }
 ```
+
+## License
+The code is released under the MIT License (see `LICENSE`). The benchmark data, human annotations
+and generated images will be released under CC BY 4.0 with the camera-ready version.
+CLEVR is © its original authors and licensed under CC BY 4.0.
+
